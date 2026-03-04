@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JULES - Privacy Policy & Terms of Service</title>
+    <title>JULES - Privacy Policy & OAuth Verification Hub</title>
     <style>
         body { font-family: -apple-system, Segoe UI, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f6f8fa; }
         .container { background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         h1 { color: #0366d6; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #2c3e50; margin-top: 30px; border-bottom: 1px solid #eee; }
+        h2 { color: #2c3e50; margin-top: 30px; border-bottom: 1px solid #eee; font-size: 1.5em; }
+        h3 { color: #444; margin-top: 20px; font-size: 1.2em; }
         .highlight { background: #fff9c4; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
-        nav { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; margin-bottom: 20px; text-align: center; z-index: 100; }
+        nav { position: sticky; top: 0; background: white; padding: 15px 0; border-bottom: 1px solid #ddd; margin-bottom: 20px; text-align: center; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
         nav a { margin: 0 15px; text-decoration: none; color: #0366d6; font-weight: bold; }
-        .footer { text-align: center; margin-top: 50px; color: #6a737d; font-size: 0.9em; }
-        .scope-box { background: #f1f8ff; border-left: 4px solid #0366d6; padding: 15px; margin: 15px 0; }
+        .footer { text-align: center; margin-top: 50px; color: #6a737d; font-size: 0.85em; border-top: 1px solid #eee; padding-top: 20px; }
+        .video-container { background: #f8f9fa; border: 1px dashed #0366d6; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0; }
+        .scope-box { background: #f1f8ff; border-left: 4px solid #0366d6; padding: 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+        .important-note { background: #fff5f5; border-left: 4px solid #d73a49; padding: 15px; margin: 15px 0; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#about">About</a>
+    <a href="#about">Product</a>
+    <a href="#demo">Demo Video</a>
     <a href="#privacy">Privacy Policy</a>
     <a href="#terms">Terms of Service</a>
 </nav>
@@ -27,49 +31,57 @@
 <div class="container">
     <section id="about">
         <h1>JULES - Android Studio Cloud Backup</h1>
-        <p>JULES (JetBrains User-Level Encrypted Storage) is an IDE plugin for Android Studio and IntelliJ IDEA, developed by <strong>Shay Frishwasser</strong>. It enables developers to securely back up project files to their personal Google Drive storage.</p>
+        <p>JULES (JetBrains User-Level Encrypted Storage) is a professional IDE plugin for Android Studio and IntelliJ IDEA. It provides automated, AES-256 encrypted backups of project files directly to the user's personal Google Drive.</p>
+    </section>
+
+    <section id="demo" class="video-container">
+        <h2>OAuth Verification Demo</h2>
+        <p>This video demonstrates the OAuth 2.0 flow, scope requests, and how JULES interacts with Google Drive APIs.</p>
+        <p><strong>Watch on YouTube:</strong> <a href="https://youtu.be/WelpJCjlFzE" target="_blank">JULES Demo Video</a></p>
     </section>
 
     <section id="privacy">
-        <h2>Privacy Policy</h2>
+        <h2>Privacy Policy & Data Disclosure</h2>
         <p><strong>Last Updated: March 4, 2026</strong></p>
         
-        <h3>1. Data Collection & Disclosure</h3>
-        <p>JULES is a <strong>client-side only</strong> application. We do not operate any backend servers. We <span class="highlight">do not collect, store, transmit, or share</span> any personal data, authentication tokens, or source code with any third parties, including the developer.</p>
-
-        <h3>2. Google OAuth & Scopes</h3>
-        <p>JULES uses Google OAuth 2.0 to authenticate users and interact with Google Drive. We request the following scopes:</p>
+        <h3>1. Scope Justification (Why we need these permissions)</h3>
+        <p>To provide secure backup services, JULES requires access to:</p>
         <div class="scope-box">
             <strong>https://www.googleapis.com/auth/drive.file</strong><br>
-            <em>Used to create and manage the backup ZIP archives within your Drive.</em><br><br>
+            <em>Justification:</em> Required to upload, update, and manage the encrypted ZIP archives created by the plugin. JULES only interacts with files it has created.<br><br>
             <strong>https://www.googleapis.com/auth/drive.appdata</strong><br>
-            <em>Used to store and sync your plugin configuration (e.g., backup intervals).</em>
+            <em>Justification:</em> Required to store user-specific plugin settings (e.g., backup frequency) in a hidden configuration folder, ensuring a seamless experience across multiple workstations.
         </div>
-        <p>The plugin only accesses files <strong>created by JULES</strong>. It cannot read, scan, or index other files in your Google Drive.</p>
 
-        <h3>3. Data Security (AES-256)</h3>
-        <p>All project data is <span class="highlight">encrypted locally</span> using AES-256 before being transmitted to Google Drive. The encryption keys are managed by the user within the IDE. The developer has no access to your encryption keys or your backed-up data.</p>
+        <h3>2. Data Collection & Disclosure</h3>
+        <p>JULES is a <strong>client-side only</strong> application. We do not operate any backend servers. We <span class="highlight">do not collect, store, transmit, or share</span> any personal data, authentication tokens, or source code with any third parties.</p>
 
-        <h3>4. Google Limited Use Policy</h3>
-        <p>JULES's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <h3>3. Google Limited Use Policy</h3>
+        <p class="important-note">JULES's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <h3>4. Data Sharing & Security</h3>
+        <ul>
+            <li>No data is used for advertising, analytics, profiling, or AI training purposes.</li>
+            <li>All project data is <strong>encrypted locally</strong> (AES-256) before transmission.</li>
+            <li>OAuth access tokens are stored locally within the IDE's secure storage.</li>
+        </ul>
 
         <h3>5. Data Retention & Deletion</h3>
-        <p>Users have full control over their data. You can delete backups at any time via the plugin or the Google Drive web interface. To revoke access, visit <a href="https://myaccount.google.com/permissions" target="_blank">Google Security Settings</a>.</p>
+        <p>Users can delete their data via the plugin or Google Drive. To revoke access: <a href="https://myaccount.google.com/permissions" target="_blank">Google Permissions Manager</a>.</p>
     </section>
 
     <section id="terms">
         <h2>Terms of Service</h2>
-        <h3>1. Agreement to Terms</h3>
-        <p>By using JULES, you agree to be bound by these terms. JULES is provided <strong>"AS IS"</strong> without warranties of any kind.</p>
-        <h3>2. Limitation of Liability</h3>
-        <p>Shay Frishwasser shall not be liable for any data loss, encryption key loss, or Google Drive service interruptions. You are responsible for ensuring your own data integrity.</p>
-        <h3>3. Governing Law</h3>
-        <p>These terms are governed by the laws of the State of Israel.</p>
+        <p>JULES is provided "AS IS". The developer (Shay Frishwasser) is not liable for data loss or Google Drive service interruptions. All use is subject to the laws of the State of Israel.</p>
     </section>
 
     <section id="contact">
-        <h2>Contact Information</h2>
-        <p>For support or privacy inquiries: <strong>Frish@arnons.net</strong></p>
+        <h2>Legal Contact</h2>
+        <p>
+            <strong>Developer:</strong> Shay Frishwasser<br>
+            <strong>Location:</strong> Tel Aviv, Israel<br>
+            <strong>Email:</strong> Frish@arnons.net
+        </p>
     </section>
 </div>
 
@@ -79,3 +91,4 @@
 
 </body>
 </html>
+

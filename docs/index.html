@@ -8,46 +8,27 @@
         body { font-family: -apple-system, Segoe UI, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f6f8fa; }
         .container { background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         h1 { color: #0366d6; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #2c3e50; margin-top: 30px; border-bottom: 1px solid #eee; font-size: 1.5em; }
-        nav { position: sticky; top: 0; background: white; padding: 15px 0; border-bottom: 1px solid #ddd; margin-bottom: 20px; text-align: center; z-index: 100; }
+        nav { position: sticky; top: 0; background: white; padding: 15px 0; border-bottom: 1px solid #ddd; margin-bottom: 20px; text-align: center; }
         nav a { margin: 0 15px; text-decoration: none; color: #0366d6; font-weight: bold; }
         .video-container { background: #f8f9fa; border: 1px dashed #0366d6; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0; }
-        .footer { text-align: center; margin-top: 50px; color: #6a737d; font-size: 0.85em; border-top: 1px solid #eee; padding-top: 20px; }
+        .footer { text-align: center; margin-top: 50px; color: #6a737d; font-size: 0.85em; }
     </style>
 </head>
 <body>
-
 <nav>
-    <a href="index.html">Home / Demo</a>
+    <a href="index.html">Home</a>
     <a href="privacy.html">Privacy Policy</a>
-    <a href="privacy.html#terms">Terms of Service</a>
+    <a href="tos.html">Terms of Service</a>
 </nav>
-
 <div class="container">
-    <section id="about">
-        <h1>JULES - Android Studio Cloud Backup</h1>
-        <p>JULES (JetBrains User-Level Storage) is a professional IDE plugin for Android Studio and IntelliJ IDEA. It provides automated backups of project files as ZIP archives directly to the user's personal Google Drive.</p>
-    </section>
-
-    <section id="demo" class="video-container">
+    <h1>JULES - Android Studio Cloud Backup</h1>
+    <p>Automated backups of your project files as ZIP archives directly to your personal Google Drive.</p>
+    <div class="video-container">
         <h2>OAuth Verification Demo</h2>
-        <p>This video demonstrates the OAuth 2.0 flow, scope requests, and how JULES interacts with Google Drive APIs.</p>
         <p><strong>Watch on YouTube:</strong> <a href="https://youtu.be/WelpJCjlFzE" target="_blank">JULES Demo Video</a></p>
-    </section>
-
-    <section id="contact">
-        <h2>Developer Information</h2>
-        <p>
-            <strong>Developer:</strong> Shay Frishwasser<br>
-            <strong>Location:</strong> Tel Aviv, Israel<br>
-            <strong>Email:</strong> Frish@arnons.net
-        </p>
-    </section>
+    </div>
+    <p><strong>Developer:</strong> Shay Frishwasser | Tel Aviv, Israel</p>
 </div>
-
-<div class="footer">
-    Developed by Shay Frishwasser | Google OAuth Client ID: 749196002058-u1qu88sqob39ta6l3c65dmoe9j2v8c0b.apps.googleusercontent.com
-</div>
-
+<div class="footer">Client ID: 749196002058-u1qu88sqob39ta6l3c65dmoe9j2v8c0b.apps.googleusercontent.com</div>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JULES - Project Backup & Versioning</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 850px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
+        .card { background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 6px; box-shadow: 0 1px 3px rgba(27,31,35,0.12); }
+        h1, h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; color: #0366d6; }
+        code { background-color: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #586069; }
+        section { margin-bottom: 40px; scroll-margin-top: 20px; }
+        nav { background: #fff; padding: 10px; border-bottom: 1px solid #e1e4e8; position: sticky; top: 0; text-align: center; margin-bottom: 20px; }
+        nav a { margin: 0 15px; text-decoration: none; color: #0366d6; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">Home</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms of Service</a>
+</nav>
+
+<div class="card">
+    <section id="about">
+        <h1>JULES - Android Studio Cloud Backup</h1>
+        <p><strong>JULES</strong> (JetBrains User-Level Encrypted Storage) is a secure cloud backup plugin for Android Studio. It provides automated, AES-256 encrypted backups of your project files directly to your personal Google Drive.</p>
+        <ul>
+            <li><strong>Automated Snapshots:</strong> Every 9 minutes (configurable).</li>
+            <li><strong>Secure:</strong> Local AES-256 encryption.</li>
+            <li><strong>Efficient:</strong> Only changes are uploaded (Delta-sync).</li>
+        </ul>
+        <p><em>Developed by Shay Frishwasser</em></p>
+    </section>
+
+    <section id="privacy">
+        <h2>Privacy Policy</h2>
+        <p><strong>Last Updated:</strong> March 4, 2026</p>
+        <p>JULES is a client-side application. We <strong>do not</strong> have servers and <strong>do not</strong> collect your data.</p>
+        <p><strong>Scopes Used:</strong> We use <code>drive.file</code> and <code>drive.appdata</code> to manage your backups. We only access files created by JULES. Authentication is handled via Google OAuth 2.0; your password is never seen by the plugin.</p>
+        <p><strong>Contact:</strong> Frish@arnons.net</p>
+    </section>
+
+    <section id="terms">
+        <h2>Terms of Service</h2>
+        <p><strong>Acceptance:</strong> By using JULES, you agree to these terms. The plugin is provided "AS IS".</p>
+        <p><strong>Responsibility:</strong> You are responsible for your Google Drive quota. The developer is not liable for data loss due to third-party service issues or encryption key loss.</p>
+    </section>
+</div>
+
+<div class="footer">© 2026 JULES Backup - Shay Frishwasser</div>
+
+</body>
+</html>
